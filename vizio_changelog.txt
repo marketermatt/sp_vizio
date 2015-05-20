@@ -1,0 +1,241 @@
+Vizio Changelog
+
+{1.7.1} - 6/1/15
+Update - Changed file path to check for a new version of Vizio
+
+{1.7.0} - 2/11/15
+Update - WooCommerce 2.3.0 templates
+Remove - WooCommerce shop/breadcrumb folder and template file
+Remove - Product Zoom when on mobile
+Remove - Tooltip on mobile
+Fix - Wishlist variable product select option button not behaving correctly
+Fix - Customizer styles were not saving correctly
+Add - Sort position order for FAQ items
+Add - Title tag support since WP 4.1
+Tweak - Navigation arrows for product image gallery slider to be in better position
+
+{1.6.3} - 12/29/14
+Fix - Theme customizer options were not showing up after WordPress 4.1
+Fix - Register shortcode captcha option to true/false
+Fix - Price filter slider handle styling missing
+Fix - Page builder one third and two third columns reversed
+Fix - Page builder one third and two third column count incorrect
+Update - Put customizer sections into its own panels
+Update - Checkout payment gateway styling
+Update - Layerslider 5.3.2
+Add - JS user triggers when checkout tabs are changed
+Add - Option to turn on/off 3 step checkout
+Add - Contact form email JS validation
+Add - Filter hook to change link target for social media profile icons
+Add - Page builder one fourth and three fourth columns
+
+{1.6.2} - 10/13/14
+Fix - Firefox bug with anchor tag being inline-block not able to be responsive
+Fix - Item added text not changing back to add to cart on variation change
+Tweak - Product category get image size function to work better on certain hosting conditions
+Tweak - CSS
+Add - Filter to change cart link to checkout for the interactive add to cart modal popup
+Add - SSL check for favicon image URL
+
+{1.6.1} - 9/29/14
+Fix - WooCommerce order templates are out of date
+Update - LayerSlider 5.3.1
+Add - Search all option ( need to reset theme config to see setting ).  This search type is not recommended
+
+{1.6.0} - 9/22/14
+Fix - Disabled guest checkout still showed guest checkout continue button
+Add - Checkout page option to allow/disallow login
+Update - LayerSlider 5.3.0
+
+{1.5.1} - 9/15/14
+Fix - Page builder custom content done and cancel button was hidden when content is long
+Update - LayerSlider 5.2.1
+
+{1.5.0} - 8/17/14
+Fix - Page builder custom content done and cancel button not functioning when visual editor is disabled
+Fix - Pinterest was not passing product image error
+Fix - Admin page builder column setting not saving on first saves
+Update - LayerSlider 5.2.0
+Update - Boostrap 3.2.0
+Add - Option to remove sliders on small mobile devices to improve performance
+Remove - Quickview on smaller screens for performance
+
+{1.4.1} - 8/11/14
+Remove - Firefox spin button on number input text fields
+Remove - Page builder cache as it was causing issue with shortcodes
+Fix - Checkout ship to different address was not being validated for inputs
+Fix - Some shortcodes inner wrap content was not properly generated
+Add - Lazyload product list images and blog list post images for performance
+
+{1.4.0} - 7/14/14
+Add - 3 new page builder column layouts
+Add - Page builder row collapse function for better usability
+Add - Page builder widget area module
+Remove - Sidebars from page builder pages
+Fix - Post/Portfolio were not properly displaying content when excerpt is used
+
+{1.3.8} - 7/1/14
+Fix - Renamed Layer Slider folder name as it caused error on some servers
+Update - Relocate shortcode JS to main.js file to prevent cached pages from failing to load the JS
+
+{1.3.7} - 6/30/14
+Fix - Decode bloginfo name for email plain text display
+Fix - Shortcodes not adding required fields
+Fix - Customizer backgrounds were not able to reset when default is a color
+Fix - After variation image swap, image zoom was not showing correct image
+Fix - Flickr widget not showing photos due to request URL not being SSL
+Add - Filter on default font loading
+Add - Row count for page builder
+Add - Column count for page builder
+Update - Footer phone number no longer requires footer menu to display
+Update - Select2
+Update - Adding new row in page builder will now scroll to added row
+Tweak - Page builder pages improve load time by 50% faster
+Tweak - Product slider styling issue where images were cut off
+
+{1.3.6} - 5/16/14
+Fix - Custom widgets were determined by products/posts instead of category
+Fix - Customizer fonts where removed after theme settings were saved
+Add - On/off for SEO
+
+{1.3.5} - 5/8/14
+Fix - Contact form multi-select fields were not sending all data to email
+Fix - Version changelog link broken
+Add - My account login redirect filter
+
+{1.3.4} - 4/25/14
+Fix - Product variations clear options was not clearing
+
+{1.3.3} - 4/22/14
+Add - Editor styles
+Fix - Custom content module not working properly
+
+{1.3.2} - 4/21/14
+Fix - Shortcode button disappeared due to WP 3.9
+Fix - Page builder tinymce editor not working correctly due to WP 3.9
+Fix - Login shortcode not redirecting correctly after login
+Fix - Lost password shortcode expired key issue
+
+{1.3.1} - 4/14/14
+Fix - Facebook open graph was not turning off
+Fix - Changelog link issue when using child theme
+Update - Better compatibility with product add ons extension
+Remove - Interactive cart option for compatibility reasons - its now always on
+
+{1.3.0} - 3/31/14
+Fix - Blog posts pagination styles were not working
+Fix - IE9 quirk which shows mobile menu icon all the time
+Fix - Portfolio lightbox missing dimmed mask on popup
+Fix - Customizer footer background color not applying
+Fix - Cart update sometimes not working due to missing nonce
+Fix - Google Analytics was not displaying
+Add - Option to set a default product view either grid or list
+Add - Page builder outer container style
+Add - Product view default setting
+Update - Select2 3.4.6
+
+{1.2.0} - 3/15/14
+Fix - Grid/List icons missing from font updates
+Fix - Blog post more tag was not working
+Fix - Custom fonts were not loaded properly
+Add - Icon fonts
+Update - PO files
+Update - MagnificPopup 0.9.9
+Update - Twitter Bootstrap 3.1.1
+Update - Modernizr 2.7.1
+Update - SecurImage 3.5.2
+Update - Zoom 1.7.12
+Update - TimePicker 1.4.3
+Update - jQuery Cookie 1.4.0
+Update - LayerSlider 5.1.1
+
+{1.1.3} - 3/3/14
+Fix - Contact form field options undefined index when saving
+Fix - CSS was not compressed on deployment
+Fix - Testimonials sometimes not showing name
+Fix - Mobile menu was not hiding when window is resized
+Update - Icon fonts
+Tweak - Contact form admin ui
+Add - Dynamic theme notices from remote server
+Add - Media library tab for customizer uploads
+Removed - Customizer navigation settings
+
+{1.1.2} 2/17/14
+Fix - Carousel slider slide settings were not saving correctly
+Fix - Shortcode modules with radio buttons were not saving correctly
+Update - WooCommerce template versions
+Tweak - Product meta icons location and styling
+
+{1.1.1} 2/11/14
+Fix - Checkout page dropdown text color unable to see
+Fix - Purchase button disappears when payment method is chosen
+
+{1.1.0} 2/10/14
+Fix - Footer nav customizer style not saving
+Fix - Page builder social media icons were not showing on pages
+Fix - Add to cart was not working on compare product pages
+Fix - Checkout additional information text formatting
+Tweak - Product social media icon location
+Tweak - Function to get config file as some servers don’t like wp_remote_get
+Add - WooCommerce 2.1 compatibility
+Add - WP Editor for FAQ
+Update - Bootstrap 3.1.0
+Update - LayerSlider 5.0.2
+
+{1.0.8} 12/22/13
+Fix - Shortcode button was not working properly
+
+{1.0.7} 12/16/13
+Fix - Product social share was not disabling
+Fix - Button shortcode not generating correctly
+Fix - Theme update notification was not displaying
+Fix - Login logo was being cropped in WP 3.8
+Remove - Compare/wishlist save code from pages
+Add - Body text color to customizer
+
+{1.0.6} 12/06/13
+Fix - Add to cart issue in wishlist page
+Fix - Add to cart "added" class was not added after item added
+Fix - Contact form was not able to submit
+Fix - Contact form not clearing email field on successful submit
+Fix - Contact form "do it for me" template button was not functioning properly
+
+{1.0.5} 12/02/13
+Fix - Grouped products were not adding to the cart correctly with AJAX enabled
+Fix - Products with more than 1 quantity was not adding to cart correctly with AJAX enabled
+Fix - Add to cart button "added" style when no items added
+Update - Adjusted styling for grouped products
+Add - expiration to config transient
+Add - Option to refresh config setting's cache
+
+{1.0.4} 11/26/13
+Add - Minimum visible items option on product slider
+Add - Product item width on product slider
+Add - Product slider template
+Tweak - Refactored product slider shortcode
+Fix - Customizer reset was not working
+Fix - Load order of customizer and custom styles
+
+{1.0.3} 11/15/13
+Fix - Variable name in sp_get_image_size function
+Fix - Customizer settings were not saved in childtheme
+
+{1.0.2} 11/10/13
+Update - Theme customizer page settings now includes page builder content
+Update - Magnificpopup 0.9.8
+Update - Bootstrap 3.0.2
+Update - Select2 3.4.4
+Update - Zoom 1.7.10
+Update - Layerslider 4.6.5
+Fix - Variations that are set with "any" selection now correctly adds to cart
+Fix - Page builder pages are not being password protected when set
+
+{1.0.1} 10/29/2013
+Fix - Quantity field alignment
+Fix - Additional info on checkout need slashes stripped
+Fix - Blog widget missing comment icons
+Removed - Default text for maintenance page when first created
+Update - Reduced size of font for add to cart buttons
+Update - Remove header title area when show title is off
+
+{1.0} 9/30/2013 - release
