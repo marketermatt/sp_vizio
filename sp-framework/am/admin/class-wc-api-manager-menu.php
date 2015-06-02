@@ -12,14 +12,14 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class API_Manager_Example_theme_MENU {
+class API_Manager_Vizio_theme_MENU {
 
-	private $api_manager_theme_example_key;
+	private $api_manager_theme_vizio_key;
 
 	// Load admin menu
 	public function __construct() {
 
-		$this->api_manager_theme_example_key = AMET()->api_manager_theme_example_key;
+		$this->api_manager_theme_vizio_key = AMET()->api_manager_theme_vizio_key;
 
 		add_action( 'admin_menu', array( $this, 'add_menu' ) );
 		add_action( 'admin_init', array( $this, 'load_settings' ) );
@@ -28,12 +28,11 @@ class API_Manager_Example_theme_MENU {
 	// Add option page menu
 	public function add_menu() {
 
-		/* $page = add_options_page( __( AMET()->ame_settings_menu_title, AMET()->text_domain ), __( AMET()->ame_settings_menu_title, AMET()->text_domain ),
+	/* 	$page = add_options_page( __( AMET()->ame_settings_menu_title, AMET()->text_domain ), __( AMET()->ame_settings_menu_title, AMET()->text_domain ),
 						'manage_options', AMET()->ame_activation_tab_key, array( $this, 'config_page')
 		); */
 		
 		$page = add_submenu_page( 'index.php', __( AMET()->ame_settings_menu_title), __( AMET()->ame_settings_menu_title), 'manage_options', AMET()->ame_activation_tab_key, array( $this, 'config_page') );
-		
 		add_action( 'admin_print_styles-' . $page, array( $this, 'css_scripts' ) );
 	}
 
@@ -156,7 +155,7 @@ class API_Manager_Example_theme_MENU {
 					'licence_key' 	=> $api_key,
 					);
 
-				$activate_results = json_decode( $this->api_manager_theme_example_key->activate( $args ), true );
+				$activate_results = json_decode( $this->api_manager_theme_vizio_key->activate( $args ), true );
 
 				if ( $activate_results['activated'] === true ) {
 					add_settings_error( 'activate_text', 'activate_msg', __( 'Theme activated. ', AMET()->text_domain ) . "{$activate_results['message']}.", 'updated' );
@@ -249,7 +248,7 @@ class API_Manager_Example_theme_MENU {
 			'licence_key' 	=> $current_api_key,
 			);
 
-		$reset = $this->api_manager_theme_example_key->deactivate( $args ); // reset license key activation
+		$reset = $this->api_manager_theme_vizio_key->deactivate( $args ); // reset license key activation
 
 		if ( $reset == true )
 			return true;
@@ -268,7 +267,7 @@ class API_Manager_Example_theme_MENU {
 			);
 
 		// For testing activation status_extra data
-		// $activate_results = json_decode( $this->api_manager_theme_example_key->status( $args ), true );
+		// $activate_results = json_decode( $this->api_manager_theme_vizio_key->status( $args ), true );
 		// print_r($activate_results); exit;
 
 		$options = ( $input == 'on' ? 'on' : 'off' );
@@ -276,7 +275,7 @@ class API_Manager_Example_theme_MENU {
 		if ( $options == 'on' && $activation_status == 'Activated' && AMET()->ame_options[AMET()->ame_api_key] != '' && AMET()->ame_options[AMET()->ame_activation_email] != '' ) {
 
 			// deactivates license key activation
-			$activate_results = json_decode( $this->api_manager_theme_example_key->deactivate( $args ), true );
+			$activate_results = json_decode( $this->api_manager_theme_vizio_key->deactivate( $args ), true );
 
 			// Used to display results for development
 			//print_r($activate_results); exit();
@@ -378,4 +377,4 @@ class API_Manager_Example_theme_MENU {
 
 }
 
-new API_Manager_Example_theme_MENU();
+new API_Manager_Vizio_theme_MENU();
