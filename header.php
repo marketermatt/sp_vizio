@@ -38,7 +38,9 @@ endif;
 				<div class="container">
 					<div class="row">
 						<div class="<?php echo sp_column_css( '', '', '', '6' ); ?>">
-							<div class="left-content"><?php do_action( 'sp_top_bar_left_content' ); ?></div><!--close .left-content-->
+							<div class="left-content">
+							<?php echo sp_top_bar_left_content(); ?>
+							</div><!--close .left-content-->
 						</div><!--close .column-->
 
 						<div class="<?php echo sp_column_css( '', '', '', '6' ); ?>">

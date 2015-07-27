@@ -20434,3 +20434,10 @@
 
 }
 
+
+
+.top-bar-nav
+{
+	clear: unset !important;
+    float: left !important;
+} 
