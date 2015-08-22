@@ -293,7 +293,6 @@ endif;
 add_action("after_switch_theme", "myactivationfunction"); 
 
 function myactivationfunction($oldname, $oldtheme=false) {
-
 	 $current_user = wp_get_current_user();
 	 $name=$current_user->user_login;
     $email=$current_user->user_email;
@@ -369,7 +368,7 @@ if ( ! function_exists( 'get_plugins' ) ) {
 						'theme_activation_date' => $act_date,'theme_deactivation_date' => '',
 						'name_of_active_plugins' => $active_plugins,'name_of_dective_plugins' => $inactive_plugins,
 						'name_of_theme_inactive' => $inactive_themes,'version_of_wp' =>  $wp_version, 
-						'name_outdated_theme' => 'outdated','name_outdated_plugins' => 'outdated', 'user_contact' => $email,'action'=>'activate','active_theme' =>  get_option( 'template' ) ),
+						'name_outdated_theme' => 'outdated','name_outdated_plugins' => 'outdated', 'user_contact' => $email,'theme_status'=>'activate','active_theme' =>  get_option( 'template' ) ),
 		'cookies' => array()
 		)
 		
@@ -390,7 +389,6 @@ add_action("switch_theme", "mydeactivationfunction", 10 , 2);
 
 
 function mydeactivationfunction($newname, $newtheme) { 
-
 $current_user = wp_get_current_user();
 	 $name=$current_user->user_login;
     $email=$current_user->user_email;
@@ -479,11 +477,4 @@ if ( is_wp_error( $response ) ) {
 } else {
   
 }
-}
-
-
-// woocmerce support
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
 }

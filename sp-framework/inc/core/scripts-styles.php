@@ -178,10 +178,10 @@ function _sp_deregister_woo_scripts() {
 	wp_dequeue_style( 'woocommerce-layout' );
 	wp_dequeue_style( 'woocommerce-smallscreen' );
 	wp_dequeue_style( 'woocommerce-general' );
-	wp_dequeue_style( 'woocommerce_prettyPhoto_css' );
+	//wp_dequeue_style( 'woocommerce_prettyPhoto_css' );
 	//wp_dequeue_style( 'woocommerce_chosen_styles' );
-	wp_dequeue_script( 'prettyPhoto' );
-	wp_dequeue_script( 'prettyPhoto-init' );
+	//wp_dequeue_script( 'prettyPhoto' );
+	//wp_dequeue_script( 'prettyPhoto-init' );
 	wp_dequeue_script( 'wc-add-to-cart' ); // removing this and using our own so we can have ajax add to cart everywhere
 	//wp_dequeue_script( 'wc-chosen' );
 	wp_dequeue_script( 'chosen' );

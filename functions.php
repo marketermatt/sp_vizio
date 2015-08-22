@@ -30,3 +30,21 @@ if ( is_file( get_template_directory() . '/theme-functions/theme-functions.php' 
 if ( is_file( get_template_directory() . '/theme-functions/theme-woo-functions.php' ) && sp_woo_exists() ) {
 	require_once( get_template_directory() . '/theme-functions/theme-woo-functions.php' );
 }
+
+
+
+// LOAD PRETTY PHOTO for the whole site
+
+add_action( 'wp_enqueue_scripts', 'frontend_scripts_include_lightbox' );
+
+function frontend_scripts_include_lightbox() {
+  global $woocommerce;
+  $suffix      = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+  $lightbox_en = get_option( 'woocommerce_enable_lightbox' ) == 'yes' ? true : false; 
+  
+  if ( $lightbox_en ) {
+    wp_enqueue_script( 'prettyPhoto', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
+    wp_enqueue_script( 'prettyPhoto-init', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto.init' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
+    wp_enqueue_style( 'woocommerce_prettyPhoto_css', $woocommerce->plugin_url() . '/assets/css/prettyPhoto.css' );
+  }
+}

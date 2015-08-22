@@ -52,9 +52,9 @@ global $post, $woocommerce, $product;
 						$new_badge .= '<span class="new">' . __( 'NEW!', 'sp-theme' ) . '</span>' . PHP_EOL;
 					}
 				}
-			}
+			} 
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s">%s<i class="icon-resize-full hover-icon" aria-hidden="true"></i>%s%s</a>', $image_link, $image_title, $image, $sale_flash, $new_badge ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" data-rel="prettyPhoto[product-gallery]" class="woocommerce-main-image zoom lightbox" title="%s">%s<i class="icon-resize-full hover-icon" aria-hidden="true"></i>%s%s</a>', $image_link, $image_title, $image, $sale_flash, $new_badge ), $post->ID );
 
 		} else {
 

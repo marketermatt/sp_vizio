@@ -32,7 +32,7 @@ if ( $attachment_ids ) {
 			$main_image_link = wp_get_attachment_url( $main_attachment_id );
 			$main_image_title = esc_attr( get_the_title( $main_attachment_id ) );
 
-			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<a href="%s" class="%s" title="%s">%s</a>', $main_image_link, $main_image_class, $main_image_title, $main_image ), $main_attachment_id, $post->ID, $main_image_class );	
+			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<a href="%s" data-rel="prettyPhoto[product-gallery]" class="%s" title="%s">%s</a>', $main_image_link, $main_image_class, $main_image_title, $main_image ), $main_attachment_id, $post->ID, $main_image_class );	
 		}
 
 		$loop = 0;
@@ -57,7 +57,9 @@ if ( $attachment_ids ) {
 			$image_class = esc_attr( implode( ' ', $classes ) );
 			$image_title = esc_attr( get_the_title( $attachment_id ) );
 
-			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<a href="%s" class="%s" title="%s">%s</a>', $image_link, $image_class, $image_title, $image ), $attachment_id, $post->ID, $image_class );
+			//echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<a href="%s" data-rel="prettyPhoto[product-gallery]" class="%s" title="%s">%s</a>', $image_link, $image_class, $image_title, $image ), $attachment_id, $post->ID, $image_class );
+			
+			echo '<a data-rel="prettyPhoto[product-gallery]" data-product-id="'.$post->ID.'" data-attachment-id="'.$attachment_id.'" class="zoom first bx-clone" title="'.$image_title.'" href="'.$image_link.'" style="float: left; list-style: outside none none; position: relative; width: 60px; margin-right: 10px;">'.$image.'<span class="overlay"></span></a>';
 
 			$loop++;
 		}

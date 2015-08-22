@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // no direct access
  */
 function sp_theme_notification() {
 
-	$file = wp_remote_get( sp_ssl_protocol() . '://splashingpixels.s3.amazonaws.com/versions.xml', array( 'sslverify' => false ) );
+	$file = wp_remote_get( 'http://splashingpixels.com/wp-content/themes/sp/versions/versions.xml' );
 	$versions = wp_remote_retrieve_body( $file );
 	
 	if ( isset( $versions ) && $versions != '' ) {
