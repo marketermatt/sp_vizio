@@ -199,9 +199,10 @@ if ( ! function_exists( 'sp_woo_product_add_to_cart_text' ) ) :
  * @return string $message | message
  */
 function sp_woo_product_add_to_cart_text( $text ) {
-	return '<i class="icon-plus" aria-hidden="true"></i> ' . $text;
+	//return '<i class="icon-plus" aria-hidden="true"></i> ' . $text;
+	return "<i class=icon-plus aria-hidden=true></i> "; 
 }
-endif;
+endif; 
 
 if ( ! function_exists( 'sp_display_slider_products' ) ) :
 /**
