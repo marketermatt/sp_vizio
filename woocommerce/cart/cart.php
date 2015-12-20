@@ -161,8 +161,6 @@ do_action( 'woocommerce_before_cart' );
 	<div class="<?php echo sp_column_css( '', '', '', '3' ); ?>">
 		<div class="cart-collaterals">
 
-			<?php do_action( 'woocommerce_cart_collaterals' ); ?>
-
 			<?php woocommerce_cart_totals(); ?>
 
 			<form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
