@@ -1,4 +1,7 @@
-Vizio Changelog
+﻿Vizio Changelog
+
+{1.7.6} - 20/12/15
+Fix - Customizer Issues - Menu not saving
 
 {1.7.1} - 6/1/15
 Update - Changed file path to check for a new version of Vizio

@@ -863,6 +863,7 @@ add_action( 'customize_save', '_sp_customize_save' );
  * @since 3.0
  * @return string done
  */
+ 
 function _sp_customize_save() {	
 	global $sptheme_config;
 
@@ -879,6 +880,7 @@ function _sp_customize_save() {
 
 	// merge in the existing saved settings with customizer posted ones
 	$settings = array_merge( $existing_mods, $settings );
+	
 	
 	// save the settings
 	foreach( $settings as $setting_name => $setting_value ) {
@@ -929,7 +931,7 @@ function _sp_customize_save() {
 	// save the theme mods to theme settings
 	_sp_save_theme_mods();
 
-	exit;	
+	//exit;	
 }
 
 /**
